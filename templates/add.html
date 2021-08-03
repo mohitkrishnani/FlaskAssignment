@@ -1,0 +1,29 @@
+{%extends "base.html" %}
+{%block content%}
+
+	<h5 class="text-start my-3 mx-2 text-primary fw-bold">Add a task to the TODO list</h5>
+	<form action ="{{url_for('add_into_csv')}}" class=" m-auto w-50"  method="POST">
+		<div class = "form-group p-0 m-5 w-75">
+			<label for="taskname" class="p-1 fs-4 text-primary" >Enter Task Name</label>
+			<input type="text" class = "p-1 w-50 float-end" id="taskname" name="taskname"placeholder="Enter task Name" required></input>
+		</div>
+		
+		<div class = "form-group p-0 m-5 w-75" >
+			<label for="taskdetails" class="p-1 fs-4 text-primary" >Enter Task Details</label>
+			<input type="textarea" class = "p-1 w-50 float-end" id="taskdetails" name="taskdetails" placeholder="Enter Task Details in brief" required></input>
+		</div>
+		
+		<div class = "form-group p-0 m-5 w-75">
+			<label for="deadline" class = "p-1 fs-4 text-primary" >Choose Deadline</label>
+			<input type="date" class = "p-1 w-50 float-end" id="deadline" name="deadline" placeholder="Choose Date" required></input>
+		</div>
+		<div class = "form-group p-0 m-5 w-75 clearfix">
+			
+			<input type="submit" class = "btn-primary p-2 rounded shadow float-end" value="Add Task"  ></input>
+		</div>
+	</form>
+
+	
+	
+	
+{% endblock %}

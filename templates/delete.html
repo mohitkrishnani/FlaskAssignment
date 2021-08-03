@@ -1,0 +1,18 @@
+{%extends "base.html" %}
+{%block content%}
+<h4 class="m-3 text-primary">Choose the task you would like to Delete from the dropdown menu</h4>
+<div class="container w-50 d-flex flex-column m-auto mt-5">
+	<form action="{{url_for('deleteTask')}}" method="GET">
+	<select class="p-2 m-3 w-100" name="item">
+	{% for i in range(len) %}
+		<option class="p-2" value={{i}}>{{data[i][0]}} - {{data[i][2]}}</option>
+	{% endfor %}
+	</select>
+	<button type="submit" class="btn-primary btn-raised rounded shadow p-2 m-4 me-0 float-end">Next</button>
+	</form>
+	
+	
+</div>
+
+
+{% endblock %}

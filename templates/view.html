@@ -1,0 +1,21 @@
+{%extends "base.html" %}
+{%block content%}
+<h4 class="m-3 text-primary">View All your tasks with their deadline as set by you</h4>
+<div class="container w-50 d-flex flex-column m-auto mt-5">
+	{% for row in data %}
+		<div class="m-3 justify-content-evenly shadow bg-light overflow-hidden" >
+			<h3 class = "m-2 text-primary fw-bold"> {{row[0]}}</h3>
+			
+			<div class = "overflow-hidden m-2 align-bottom" >
+				<span class = "text-primary float-start fs-6 w-50 text-wrap">{{row[1]}}</span>
+				<span class="text-primary float-end fs-4 fw-bold" >{{row[2]}}</span>
+			</div>
+		</div>
+		
+	{% endfor %}
+	<button type="button" class=" p-2 position-fixed bg-primary rounded-circle shadow bottom-0 end-0 m-5 " onclick="window.location.href='{{url_for('add')}}'">
+	<i class="fa fa-plus text-white p-2" style="font-size:30px"></i></button>
+</div>
+{% endblock %}
+
+

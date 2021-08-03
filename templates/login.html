@@ -1,0 +1,26 @@
+{%extends "base.html" %}
+{%block content%}
+
+	<h1 class="text-center my-3 text-primary fw-bold" >Welcome to TODO app</h1>
+	<h4 class="my-1 text-center text-primary">Please Login to continue</h4>
+	<div class="w-50 m-auto my-5 p-3 ">
+	<form action="{{url_for('login_try')}}" class = "overflow-hidden" method = "POST">
+		<div class = "form-group p-3 w-75 m-auto overflow-hidden">
+			<label for="username" class="p-1 fs-4 text-primary float-start" >Enter Username</label>
+			<input type="text" name="username" class=" w-50 float-end p-1" required></input>
+		
+		</div>
+		
+		
+		<div class = "form-group p-3 w-75 m-auto overflow-hidden">
+			<label for="password" class="p-1 fs-4 text-primary float-start" >Enter Password</label>
+			<input type="password" name="password" class=" w-50 float-end p-1" required></input>
+		
+		</div >
+		<div class = "form-group p-3 mx-auto text-center overflow-hidden">
+			<button class="btn-primary p-2 btn-raised shadow rounded" >Login</button>
+		</div>
+	</form>
+	</div>
+	
+{% endblock %}
